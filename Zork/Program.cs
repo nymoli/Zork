@@ -1,20 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Zork
 {
     class Program
     {
-        enum Commands
-        {
-            QUIT,
-            LOOK,
-            NORTH,
-            SOUTH,
-            EAST,
-            WEST,
-            UNKNOWN
-        }
-
         private static string CurrentRoom
         {
             get
@@ -30,8 +20,7 @@ namespace Zork
             Commands command = Commands.UNKNOWN;                       
             while (command != Commands.QUIT)
             {
-                Console.Write(CurrentRoom);
-                Console.Write("> ");
+                Console.Write($"{CurrentRoom}\n> ");
                 command = ToCommand(Console.ReadLine().Trim());
 
                 string outputString = null;
@@ -85,7 +74,7 @@ namespace Zork
                     Location.Column++;
                     break;
 
-                case Commands.WEST when Location.Row > 0:
+                case Commands.WEST when Location.Column > 0:
                     Location.Column--;
                     break;
 
