@@ -5,17 +5,18 @@ namespace Zork
 {
     class Program
     {
-        private static string Room CurrentRoom
+        private static Room CurrentRoom
         {
             get
             {
                 return Rooms[Location.Row, Location.Column];
-            }            
+            }
         }
-        
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Zork!");
+            InitializeRoomDescriptions();
 
             Commands command = Commands.UNKNOWN;
             while (command != Commands.QUIT)
@@ -48,7 +49,6 @@ namespace Zork
                         Console.WriteLine("Unknown command.");
                         break;
                 }
-                                
             }
         }
 
@@ -87,7 +87,7 @@ namespace Zork
 
         private static bool IsDirection(Commands command) => Directions.Contains(command);
 
-        private static void InitializeRoomDescription()
+        private static void InitializeRoomDescriptions()
         {
             Rooms[0, 0].Description = "You are on a rock-strewn trail.";
             Rooms[0, 1].Description = "You are facing the south side of a white house. There is no door here, and all the windows are barred.";
@@ -102,7 +102,7 @@ namespace Zork
             Rooms[2, 2].Description = "You are in a clearing, with a forest surrounding you on the west and south.";
         }
 
-        private static readonly string Room[,] Rooms =
+        private static readonly Room[,] Rooms =
         {
             { new Room("Rocky Trail"), new Room("South of House"), new Room("Canyon View") },
             { new Room("Forest"), new Room("West of House"), new Room("Behind House") },
