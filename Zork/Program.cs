@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Zork
 {
@@ -18,10 +19,10 @@ namespace Zork
         {
             Console.WriteLine("Welcome to Zork!");                     
 
-            string roomsFilename = "Rooms.txt";
+            string roomsFilename = "Rooms.json";
             InitializeRoomDescriptions(roomsFilename);
 
-            const string defaultRoomsFilename = "Rooms.txt";
+            const string defaultRoomsFilename = "Rooms.json";
             roomsFilename = args.Length > 0 ? args[(int)CommandLineArguments.RoomsFilename] : defaultRoomsFilename;
 
             Room previousRoom = null;
@@ -124,22 +125,10 @@ namespace Zork
         
         private static void InitializeRoomDescriptions(string roomsFilename)
         {
-            const string fieldDelimiter = "##";
-            const int expectedFieldCount = 2;
-
-            string[] lines = File.ReadAllLines(roomsFilename);
-            foreach (string line in lines)
+            var rooms = JsonConvert.DeserializeObject<Room[]>(File.ReadAllText(roomsFilename));
+            foreach (Room room in rooms)
             {
-                string[] fields = line.Split(fieldDelimiter);
-                if (fields.Length != expectedFieldCount)
-                {
-                    throw new InvalidDataException("Invalid record.");
-                }
-
-                string name = fields[(int)Fields.Name];
-                string description = fields[(int)Fields.Description];
-
-                RoomMap[name].Description = description;
+                RoomMap[room.Name].Description = room.Description;
             }
         }
 
