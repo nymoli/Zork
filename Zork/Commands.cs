@@ -1,4 +1,4 @@
-﻿namespace Zork
+﻿namespace Zork.Common
 {
     enum Commands
     {
@@ -8,6 +8,9 @@
         SOUTH,
         EAST,
         WEST,
+        TAKE,
+        DROP,
+        INVENTORY,
         UNKNOWN
     }
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "alZmiirXh/Y/76cypMhW17O2XGDZsL0A6/MKONf308amV0HJqUCeWfOkB6L+qhSMfxW0Y31OTtAmbZ9J3B9Urw==",
+  "success": true,
+  "projectFilePath": "E:\\ucf\\DIG 4778\\Zork.Cli\\Zork.Cli.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\seren\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
