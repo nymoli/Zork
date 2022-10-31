@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "alZmiirXh/Y/76cypMhW17O2XGDZsL0A6/MKONf308amV0HJqUCeWfOkB6L+qhSMfxW0Y31OTtAmbZ9J3B9Urw==",
+  "dgSpecHash": "3Gp55eULK4TnpvpVaO97HgBa8M6lsEhdXyKSihHSUYRC+uFKr5o/VwyvUOKTtDUNbBZDOMa5ViRgh5KA6gyQFQ==",
   "success": true,
-  "projectFilePath": "E:\\ucf\\DIG 4778\\Zork.Cli\\Zork.Cli.csproj",
+  "projectFilePath": "C:\\Users\\ny074660\\source\\repos\\Zork.Cli\\Zork.Cli.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\seren\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnethostpolicy\\2.1.0\\microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnethostresolver\\2.1.0\\microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\2.1.0\\microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ny074660\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
   ],
   "logs": []
 }
