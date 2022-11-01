@@ -18,7 +18,7 @@ namespace Zork.Common
 
         public void Run(IOutputService output)
         {
-            Output = output;
+            Output = output ?? throw new ArgumentNullException(nameof(output));
 
             Room previousRoom = null;
             bool isRunning = true;
@@ -65,6 +65,10 @@ namespace Zork.Common
 
                     case Commands.LOOK:
                         outputString = Player.CurrentRoom.Description;
+                        foreach (Item item in Player.CurrentRoom.Inventory)
+                        {
+
+                        }
                         break;
 
                     case Commands.NORTH:
@@ -83,13 +87,27 @@ namespace Zork.Common
                         break;
 
                     case Commands.TAKE:
-                        
-                        outputString = null;
+                        if (string.IsNullOrEmpty(itemInput))
+                        {
+                            outputString = "This command requires a subject.\n";
+                        }
+                        else
+                        {
+                            Take(itemInput);
+                            outputString = $"{itemInput} taken.";
+                        }
                         break;
 
                     case Commands.DROP:
-                        
-                        outputString = null;
+                        if (string.IsNullOrEmpty(itemInput))
+                        {
+                            outputString = "This command requires a subject.\n";
+                        }
+                        else
+                        {
+                            Drop(itemInput);
+                            outputString = $"{itemInput} dropped.";
+                        }                        
                         break;
 
                     case Commands.INVENTORY:
