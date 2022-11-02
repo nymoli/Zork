@@ -8,12 +8,15 @@ namespace Zork.Common
 
         public Player Player { get; }
 
+        public Item Item { get; }
+
         public IOutputService Output { get; private set; }
 
-        public Game(World world, string startingLocation)
+        public Game(World world, string startingLocation, Item item)
         {
             World = world;
             Player = new Player(World, startingLocation);
+            Item = item;
         }
 
         public void Run(IOutputService output)
@@ -67,7 +70,7 @@ namespace Zork.Common
                         outputString = Player.CurrentRoom.Description;
                         foreach (Item item in Player.CurrentRoom.Inventory)
                         {
-
+                            outputString = Item.LookDescription;
                         }
                         break;
 
