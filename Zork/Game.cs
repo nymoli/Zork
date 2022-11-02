@@ -10,6 +10,8 @@ namespace Zork.Common
 
         public Item Item { get; }
 
+        public IInputService Input { get; private set; }
+        
         public IOutputService Output { get; private set; }
 
         public Game(World world, string startingLocation, Item item)
@@ -57,6 +59,8 @@ namespace Zork.Common
                     itemInput = commandTokens[1];
                 }
 
+                bool hasItem = false;
+
                 Commands command = ToCommand(commandInput);
                 string outputString;
                 switch (command)
@@ -98,6 +102,7 @@ namespace Zork.Common
                         {
                             Take(itemInput);
                             outputString = $"{itemInput} taken.";
+                            hasItem = true;
                         }
                         break;
 
@@ -114,8 +119,14 @@ namespace Zork.Common
                         break;
 
                     case Commands.INVENTORY:
-                        
-                        outputString = null;
+                        if (hasItem == true)
+                        {
+                            outputString = Item.InventoryDescription;
+                        }
+                        else
+                        {
+                            outputString = "Inventory is empty.";
+                        }                        
                         break;
 
                     default:

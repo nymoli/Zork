@@ -14,6 +14,7 @@ namespace Zork.Cli
             string gameFilename = (args.Length > 0 ? args[(int)CommandLineArguments.GameFilename] : defaultRoomsFilename);
             Game game = JsonConvert.DeserializeObject<Game>(File.ReadAllText(gameFilename));
 
+            var input = new ConsoleInputService();
             var output = new ConsoleOutputService();
 
             Console.WriteLine("Welcome to Zork!");

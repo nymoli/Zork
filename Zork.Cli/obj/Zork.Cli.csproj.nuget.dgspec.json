@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork.Cli\\Zork.Cli.csproj": {}
+    "C:\\Users\\ny074660\\source\\repos\\Zork.Cli\\Zork.Cli.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork.Cli\\Zork.Cli.csproj": {
+    "C:\\Users\\ny074660\\source\\repos\\Zork.Cli\\Zork.Cli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork.Cli\\Zork.Cli.csproj",
+        "projectUniqueName": "C:\\Users\\ny074660\\source\\repos\\Zork.Cli\\Zork.Cli.csproj",
         "projectName": "Zork.Cli",
-        "projectPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork.Cli\\Zork.Cli.csproj",
+        "projectPath": "C:\\Users\\ny074660\\source\\repos\\Zork.Cli\\Zork.Cli.csproj",
         "packagesPath": "C:\\Users\\ny074660\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork.Cli\\obj\\",
+        "outputPath": "C:\\Users\\ny074660\\source\\repos\\Zork.Cli\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\ny074660\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -35,8 +34,8 @@
           "netcoreapp2.1": {
             "targetAlias": "netcoreapp2.1",
             "projectReferences": {
-              "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork\\Zork.Common.csproj": {
-                "projectPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork\\Zork.Common.csproj"
+              "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork.Common.csproj": {
+                "projectPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork.Common.csproj"
               }
             }
           }
@@ -77,24 +76,23 @@
         }
       }
     },
-    "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork\\Zork.Common.csproj": {
+    "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork\\Zork.Common.csproj",
+        "projectUniqueName": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork.Common.csproj",
         "projectName": "Zork.Common",
-        "projectPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork\\Zork.Common.csproj",
+        "projectPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork.Common.csproj",
         "packagesPath": "C:\\Users\\ny074660\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\Zork\\Zork\\obj\\",
+        "outputPath": "C:\\Users\\ny074660\\source\\repos\\Zork\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\ny074660\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
