@@ -1,6 +1,6 @@
 ﻿namespace Zork.Common
 {
-    enum Commands
+    public enum Commands
     {
         QUIT,
         LOOK,

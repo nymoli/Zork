@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Zork.Common
 {
@@ -34,9 +34,9 @@ namespace Zork.Common
             }
 
             return didMove;
-        }
+        }        
 
         private World _world;
         private Room _currentRoom;
-    }   
+    }
 }

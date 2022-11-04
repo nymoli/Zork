@@ -4,15 +4,15 @@
     {
         public string Name { get; }
 
-        public string LookDescription { get; }
-
         public string InventoryDescription { get; }
 
-        public Item(string name, string lookDescription, string inventoryDescription)
+        public string Description { get; }
+
+        public Item(string name, string inventoryDescription, string description)
         {
             Name = name;
-            LookDescription = lookDescription;
             InventoryDescription = inventoryDescription;
+            Description = description;
         }
     }
 }

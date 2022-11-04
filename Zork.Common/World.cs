@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-
 
 namespace Zork.Common
 {
@@ -14,7 +13,7 @@ namespace Zork.Common
         public Dictionary<string, Room> RoomsByName { get; }
 
         public Item[] Items { get; }
-
+        
         [JsonIgnore]
         public Dictionary<string, Item> ItemsByName { get; }
 

@@ -13,5 +13,14 @@ namespace Zork.Common
                 throw new Exception(message);
             }
         }
+
+        [Conditional("DEBUG")]
+        public static void IsFalse(bool expression, string message = null)
+        {
+            if (expression)
+            {
+                throw new Exception(message);
+            }
+        }
     }
 }
