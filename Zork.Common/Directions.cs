@@ -2,9 +2,9 @@
 {
     public enum Directions
     {
-        North = Commands.NORTH,
-        South = Commands.SOUTH,
-        East = Commands.EAST,
-        West = Commands.WEST
+        North = Commands.North,
+        South = Commands.South,
+        East = Commands.East,
+        West = Commands.West
     }
 }

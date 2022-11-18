@@ -2,15 +2,24 @@
 {
     public enum Commands
     {
-        QUIT,
-        LOOK,
-        NORTH,
-        SOUTH,
-        EAST,
-        WEST,
-        TAKE,
-        DROP,
-        INVENTORY,
-        UNKNOWN
+        Quit,
+        Q = Quit,
+        Exit = Quit,
+        Bye = Quit,
+        Look,
+        L = Look,
+        North,
+        N = North,
+        South,
+        S = South,
+        East,
+        E = East,
+        West,
+        W = West,
+        Take,
+        Drop,
+        Inventory,
+        I = Inventory,
+        Unknown
     }
 }

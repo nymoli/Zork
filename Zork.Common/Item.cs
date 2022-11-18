@@ -4,15 +4,17 @@
     {
         public string Name { get; }
 
+        public string LookDescription { get; }
+
         public string InventoryDescription { get; }
 
-        public string Description { get; }
-
-        public Item(string name, string inventoryDescription, string description)
+        public Item(string name, string lookDescription, string inventoryDescription)
         {
             Name = name;
+            LookDescription = lookDescription;
             InventoryDescription = inventoryDescription;
-            Description = description;
         }
+
+        public override string ToString() => Name;
     }
 }

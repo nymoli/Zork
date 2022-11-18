@@ -1,5 +1,5 @@
 .vs/
-Zork.Common/bin/
-Zork.Common/obj/
-Zork.Cli/bin/
-Zork.Cli/obj/
+Zork.Common/bin
+Zork.Common/obj
+Zork.Cli/bin
+Zork.Cli/obj
