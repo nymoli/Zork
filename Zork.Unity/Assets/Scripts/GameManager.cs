@@ -65,7 +65,16 @@ public class GameManager : MonoBehaviour
             InputService.SetFocus();
         }
 
-        if (Input.GetKey("escape"))
+        if (_game.IsRunning == false)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+        }
+
+            if (Input.GetKey("escape"))
         {
             Application.Quit();
         }
