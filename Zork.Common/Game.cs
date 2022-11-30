@@ -33,7 +33,7 @@ namespace Zork.Common
 
             IsRunning = true;
             Input.InputReceived += OnInputReceived;
-            Output.WriteLine("Welcome to Zork!");
+            Output.WriteLine("Welcome to Zork! Your objective is to find every item in this world.");
             Look();
             Output.WriteLine($"\n{Player.CurrentRoom}");
         }
@@ -118,11 +118,16 @@ namespace Zork.Common
                     break;
               
                 case Commands.Score:
-                    Output.WriteLine($"Your score would be {score}, in {Player.Moves} move(s).");
+                    Output.WriteLine($"Your score would be {score}.");
                     break;
 
-                case Commands.Reward:
-                    AddReward();
+                case Commands.Moves:
+                    Output.WriteLine($"You have made {Player.Moves} moves.");
+                    Output.WriteLine($"You have {Player.MovesLeft} moves remaining.");
+                    break;
+                
+                case Commands.Restart:
+                    Restart();
                     break;
 
                 default:
@@ -133,6 +138,12 @@ namespace Zork.Common
             if (command != Commands.Unknown)
             {
                 Player.Moves++;
+                Player.MovesLeft--;
+            }
+
+            if (Player.MovesLeft == 0)
+            {
+                Output.WriteLine("Game Over. Please restart to try again.");
             }
 
             if (ReferenceEquals(previousRoom, Player.CurrentRoom) == false)
@@ -183,14 +194,18 @@ namespace Zork.Common
         }
 
         public int score = 0;
-        int reward = 1;
-        public void AddReward()
+        
+        public void UpdateScore()
         {
             if (score >= 0)
             {
-                score += reward;
                 Player.Score++;
             }
+        }
+
+        public void Restart()
+        {
+
         }
 
         private static Commands ToCommand(string commandString) => Enum.TryParse(commandString, true, out Commands result) ? result : Commands.Unknown;

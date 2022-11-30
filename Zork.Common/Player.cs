@@ -9,6 +9,8 @@ namespace Zork.Common
 
         public event EventHandler<int> MovesChanged;
 
+        public event EventHandler<int> MovesLeftChanged;
+
         public event EventHandler<int> ScoreChanged;
         
         public Room CurrentRoom
@@ -39,6 +41,22 @@ namespace Zork.Common
         }
 
         private int _moves;
+
+        public int MovesLeft
+        {
+            get => _movesLeft;
+
+            set
+            {
+                if (_movesLeft != value)
+                {
+                    _movesLeft = value;
+                    MovesLeftChanged?.Invoke(this, _movesLeft);
+                }
+            }
+        }
+
+        private int _movesLeft = 30;
 
         public int Score
         {

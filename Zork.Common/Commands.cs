@@ -21,7 +21,10 @@
         Inventory,
         I = Inventory,
         Score,
-        Reward,
+        Moves,
+        M = Moves,
+        Restart,
+        R = Restart,
         Unknown
     }
 }
