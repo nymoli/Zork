@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI MovesText;
 
     [SerializeField]
+    private TextMeshProUGUI MovesLeftText;
+
+    [SerializeField]
     private UnityInputService InputService;
 
     [SerializeField]
@@ -34,6 +37,7 @@ public class GameManager : MonoBehaviour
         LocationText.text = _game.Player.CurrentRoom.Name;
         ScoreText.text = "Score: " + _game.score;
         MovesText.text = "Moves: " + moves;
+        MovesLeftText.text = "Moves Left: " + movesLeft;
     }
 
     private void Player_LocationChanged(object sender, Room location)
@@ -47,6 +51,8 @@ public class GameManager : MonoBehaviour
     {
         MovesText.text = $"Moves: {moves}";
     }
+
+    int movesLeft = 35;
 
     private void Player_MovesLeftChanged(object sender, int movesLeft)
     {

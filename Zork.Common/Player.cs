@@ -56,7 +56,7 @@ namespace Zork.Common
             }
         }
 
-        private int _movesLeft = 30;
+        private int _movesLeft = 35;
 
         public int Score
         {
