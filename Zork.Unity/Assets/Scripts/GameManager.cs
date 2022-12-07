@@ -2,6 +2,7 @@ using UnityEngine;
 using Zork.Common;
 using Newtonsoft.Json;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -86,7 +87,12 @@ public class GameManager : MonoBehaviour
 #endif
         }
 
-            if (Input.GetKey("escape"))
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            SceneManager.LoadScene("Main");
+        }
+
+        if (Input.GetKey("escape"))
         {
             Application.Quit();
         }

@@ -127,25 +127,19 @@ namespace Zork.Common
                     break;
                 
                 case Commands.Restart:
-                    Output.WriteLine("Are you sure you wish to restart?");
-                    //if (verb == Commands.Yes)
-                    //{
-                    //    Restart();
-                    //}
-                    //else if (verb == Commands.No)
-                    //{
-                    //    Output.WriteLine($"\n{Player.CurrentRoom}");
-                    //}
-                    //else
-                    //{
-                    //    Output.WriteLine($"\n{Player.CurrentRoom}");
-                    //}
-                    break;
-
-                case Commands.Yes:                    
-                    break;
-
-                case Commands.No:
+                    Output.WriteLine("Are you sure you wish to restart? Yes/No");
+                    if (verb == "Yes")
+                    {
+                        Restart();
+                    }
+                    else if (verb == "No")
+                    {
+                        Output.WriteLine($"\n{Player.CurrentRoom}");
+                    }
+                    else
+                    {
+                        Output.WriteLine($"Are you sure you wish to restart? Yes/No\n{Player.CurrentRoom}");
+                    }
                     break;
 
                 default:
@@ -229,7 +223,7 @@ namespace Zork.Common
 
         public void Restart()
         {
-
+            Console.Clear();
         }
 
         private static Commands ToCommand(string commandString) => Enum.TryParse(commandString, true, out Commands result) ? result : Commands.Unknown;
