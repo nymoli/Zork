@@ -6,55 +6,55 @@
         "Name": "Mat",
         "LookDescription": "A rubber mat saying 'Welcome to Zork!' lies here.",
         "InventoryDescription": "A welcome mat.",
-        "Points": 2
+        "Score": 2
       },
       {
         "Name": "Mailbox",
         "LookDescription": "There is a small mailbox here.",
         "InventoryDescription": "A small mailbox.",
-        "Points": 2
+        "Score": 2
       },
       {
         "Name": "Leaves",
         "LookDescription": "There is a pile of leaves here.",
         "InventoryDescription": "A pile of leaves.",
-        "Points": 1
+        "Score": 1
       },
       {
         "Name": "Egg",
         "LookDescription": "A jewel-encrusted egg lies here.",
         "InventoryDescription": "A jewel-encrusted egg.",
-        "Points": 5
+        "Score": 5
       },
       {
         "Name": "Gold",
         "LookDescription": "There is a pot of gold here.",
         "InventoryDescription": "A pot of gold.",
-        "Points": 10
+        "Score": 10
       },
       {
         "Name": "Painting",
         "LookDescription": "There is a beautiful painting here.",
         "InventoryDescription": "A beautiful painting.",
-        "Points": 5
+        "Score": 5
       },
       {
         "Name": "Torch",
         "LookDescription": "There is an unused ivory torch that lies here.",
         "InventoryDescription": "An ivory torch.",
-        "Points": 5
+        "Score": 5
       },
       {
         "Name": "Sword",
         "LookDescription": "A legendary sword lies here.",
         "InventoryDescription": "A legendary sword.",
-        "Points": 15
+        "Score": 15
       },
       {
         "Name": "Leaflet",
         "LookDescription": "There is a leaflet that lies here.",
         "InventoryDescription": "A leaflet.",
-        "Points": 1
+        "Score": 1
       }
     ],
     "Rooms": [

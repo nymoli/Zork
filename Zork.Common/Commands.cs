@@ -25,6 +25,8 @@
         M = Moves,
         Restart,
         R = Restart,
+        Yes,
+        No,
         Unknown
     }
 }

@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         _game.Player.ScoreChanged += Player_ScoreChanged;
         _game.Run(InputService, OutputService);
         LocationText.text = _game.Player.CurrentRoom.Name;
-        ScoreText.text = "Score: " + _game.score;
+        ScoreText.text = "Score: " + _game.Player.Score;
         MovesText.text = "Moves: " + moves;
         MovesLeftText.text = "Moves Left: " + movesLeft;
     }

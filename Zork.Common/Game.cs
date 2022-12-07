@@ -118,7 +118,7 @@ namespace Zork.Common
                     break;
               
                 case Commands.Score:
-                    Output.WriteLine($"Your score would be {score}.");
+                    Output.WriteLine($"Your score would be {Player.Score}.");
                     break;
 
                 case Commands.Moves:
@@ -127,7 +127,25 @@ namespace Zork.Common
                     break;
                 
                 case Commands.Restart:
-                    Restart();
+                    Output.WriteLine("Are you sure you wish to restart?");
+                    //if (verb == Commands.Yes)
+                    //{
+                    //    Restart();
+                    //}
+                    //else if (verb == Commands.No)
+                    //{
+                    //    Output.WriteLine($"\n{Player.CurrentRoom}");
+                    //}
+                    //else
+                    //{
+                    //    Output.WriteLine($"\n{Player.CurrentRoom}");
+                    //}
+                    break;
+
+                case Commands.Yes:                    
+                    break;
+
+                case Commands.No:
                     break;
 
                 default:
@@ -152,6 +170,11 @@ namespace Zork.Common
             }
 
             Output.WriteLine($"\n{Player.CurrentRoom}");
+
+            if (Player.Score == 51 && Player.MovesLeft >= 0)
+            {
+                Output.WriteLine("You found every item! You win! Thank you for playing!");
+            }
         }
         
         private void Look()
@@ -163,8 +186,10 @@ namespace Zork.Common
             }
         }
 
+        bool takenOnce = false;
+
         private void Take(string itemName)
-        {
+        {           
             Item itemToTake = Player.CurrentRoom.Inventory.FirstOrDefault(item => string.Compare(item.Name, itemName, ignoreCase: true) == 0);
             if (itemToTake == null)
             {
@@ -175,6 +200,14 @@ namespace Zork.Common
                 Player.AddItemToInventory(itemToTake);
                 Player.CurrentRoom.RemoveItemFromInventory(itemToTake);
                 Output.WriteLine("Taken.");
+                if (takenOnce == false)
+                {
+                    Player.Score += itemToTake.Score;
+                }
+                else
+                {
+                    itemToTake.Score = 0;
+                }                              
             }
         }
 
@@ -190,16 +223,7 @@ namespace Zork.Common
                 Player.CurrentRoom.AddItemToInventory(itemToDrop);
                 Player.RemoveItemFromInventory(itemToDrop);
                 Output.WriteLine("Dropped.");
-            }
-        }
-
-        public int score = 0;
-        
-        public void UpdateScore()
-        {
-            if (score >= 0)
-            {
-                Player.Score++;
+                takenOnce = true;
             }
         }
 
